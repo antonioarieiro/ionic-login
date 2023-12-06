@@ -1,13 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "demo-repo",
-  "version": "0.2.0",
-  "description": "A sample package.json",
-  "dependencies": {
-    "@primer/css": "17.0.1"
-  },
-  "license": "MIT"
-=======
   "name": "MeadowMinder",
   "version": "0.0.1",
   "author": "Ionic Framework",
@@ -74,5 +65,4 @@
     "typescript": "~5.2.2"
   },
   "description": "An Ionic project"
->>>>>>> 4d88cf5 (Tela principal com componentes não finalizados)
 }

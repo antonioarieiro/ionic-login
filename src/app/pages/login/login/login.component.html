@@ -1,0 +1,30 @@
+<div class="login-component ">
+  <div class="login-component__title">
+    <h1>Login</h1>
+  </div>
+    <div class="login-component__body">
+      <div class="login-component__form">
+        <label>Usuário</label>
+        <input class="login-component__form__user" type="text" placeholder="WebMobile..."/>
+         <label style="margin-top: 10px;">Senha</label>
+        <input class="login-component__form__user" type="password" />
+        <div class="login-component__form__btn">
+          <button (click)="redirectToLogin()">
+            Login
+          </button>
+        </div>
+        <div class="login-component__form__recovery">
+          Esqueceu sua senha ?
+        </div>
+      </div>
+     
+    </div>
+     <div class="register">
+        <p class="first-title">
+          Não tem conta ?
+        </p>
+        <p class="register-label" (click)="redirectToRegister()">
+          Criar conta.
+        </p>
+      </div>
+</div>
