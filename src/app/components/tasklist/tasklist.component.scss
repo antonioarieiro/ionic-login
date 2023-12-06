@@ -1,0 +1,123 @@
+ion-page {
+    height: 100vh;
+}
+
+.pomodoro-label {
+    font-size: 18px; // Adjust this value as needed
+    font-weight: bold;
+}
+
+.container {
+    background-color: grayscale($color: white);
+    display: flex;
+    padding: 25px;
+    border-radius: 15px;
+    align-content: center;
+    gap:20px;
+    flex-direction: column;
+    margin: 20px
+
+    ion-item {
+        background-color: red;
+        border-radius: 50px;
+        heigth: 40px;
+    }
+
+    ion-icon{
+        color: darkgray;
+        margin-right: 10px;
+    }
+}
+
+.controllers {
+    display: flex;
+    // flex-direction: row wrap;
+    gap: 20px;
+    // justify-content: row;
+    // align-items: center;
+    // padding: 20px;
+    background-color: grayscale($color: white);
+    border-radius: 15px;
+
+    ion-button {
+        display: flex;
+        align-content: center;
+        //justify-content: center;
+        // padding: 5px;
+        width: fit-content;
+        text-align: center;
+        place-content: center;
+        ion-icon[name="caret-up"] {
+            position: center;
+            color: blue;
+            font-size: 20px; 
+        }
+    }
+
+    input {
+        background: none;
+        outline: none;
+        -webkit-appearance: none;
+        box-shadow: none !important;
+        border: none;
+        background-color:lightgray;
+        height: 60px;
+        width: 8%;
+        border-radius: 5px;
+        font-size: 25px;
+        display: flex;
+
+    }
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+
+.iconDown {
+    transform: rotate(180deg);
+}
+
+.add-task-button {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  
+    ion-button {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+  ion-item-divider {
+  
+    ion-button {
+      margin-left: auto; // Pushes the button to the right
+      color: black; // Sets the icon color to black
+      padding: 5px;
+        
+      // To change the background color of the button
+      --background: lightgray; // Sets the background color to a shade of red
+      --opacity: var(--opacity);
+  
+      // Additional style to remove the ion-button's default opacity
+      --opacity: 1; // Ensures that the button is fully opaque
+  
+      // If you want to change the ripple effect color (the color when the button is pressed)
+      --ripple-color: #ffffff; // Sets the ripple effect color to white
+    }
+  }
+  

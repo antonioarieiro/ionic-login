@@ -1,0 +1,20 @@
+<div id="pomodoro-app">
+  <div id="container">
+    <div id="buttons">
+      <button id="pomodoro">Pomodoro</button>
+      <button id="shortBreak" (click)="setShortBreak()">Short Break</button>
+      <button id="longBreak" (click)="setLongBreak()">Long Break</button>
+    </div>
+      <div id="timer">
+        <div id="time">
+          <span id="minutes">{{minutes}}</span>
+          <span id="colon">:</span>
+          <span id="seconds">{{seconds}}</span>
+        </div>
+      </div>
+
+    <div id="buttons">
+      <button id="{{status==1 ? 'work' : 'stop'}}" (click)="setStatus()"> {{status==1 ? "Start" : "Pause"}} </button>
+    </div>
+  </div>
+</div>

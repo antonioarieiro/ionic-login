@@ -1,0 +1,111 @@
+#container{
+    border-radius: 5px;
+    width:400px;
+    margin:20px auto;
+    padding:20px;
+    text-align:center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  #buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // margin-bottom: 20px; /* Adiciona espaço entre os botões e o timer */
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  #buttons button {
+    background:  rgb(164, 137, 60); // Semi-transparent background to match the color
+    color: #fff; // White text color
+    cursor: pointer;
+    padding: 10px;
+    width: fit-content;
+    min-width: 90px; // Ensures that the button has at least a minimum width
+    font-size: 14px;
+    height: 50px; // Fixed height for rectangular shape
+    border-radius: 8%; // Remove border-radius for a rectangular shape
+    box-shadow: none; // Remove box-shadow if there is any
+  }
+
+  #buttons #pomodoro{
+      background: rgb(186, 73, 73);
+      border-radius: 8%;
+  }
+
+  #buttons #start{
+    background: lightyellow;
+    border-radius: 0%;
+  }
+
+  #buttons #stop{
+    background : black;
+    border-radius: 8%;
+  }
+
+  #buttons #shortBreak{
+    background: teal;
+    border-radius: 8%;
+  }
+
+  #buttons #longBreak{
+    background : rgb(57, 112, 151);
+    border-radius: 8%;
+
+  }
+
+  #timer{ 
+    color:black; 
+    font-size:50px; 
+    margin:5px auto 30px auto;
+    border-radius:50%;
+    width:200px;
+    height:200px;
+    overflow:hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:default;
+    background: black/* conic-gradient(#7d2ae8 3.6deg, #ededed 0deg) */;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #timer::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 92%;
+    width: 92%;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  #time{
+    position: relative;
+    z-index : 1;
+    // position: center;
+  }
+
+  .timer-pomodoro {
+    background: rgb(186, 73, 73); /* Pomodoro color */
+  }
+  
+  .timer-short-break {
+    background: teal; /* Short Break color */
+  }
+  
+  .timer-long-break {
+    background: rgb(57, 112, 151); /* Long Break color */
+  }
+  

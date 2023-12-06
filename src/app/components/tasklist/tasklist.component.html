@@ -1,0 +1,72 @@
+<ion-item-group>
+  <ion-item-divider>
+    <ion-label>Tasks</ion-label>
+    <ion-button fill="clear" (click)="toggleDropdown()" slot="end">
+      <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+    </ion-button>
+  </ion-item-divider>
+</ion-item-group>
+
+<!-- Dropdown Menu -->
+<div *ngIf="showDropdown" class="dropdown-menu">
+  <!-- <ion-button fill="clear" (click)="clearAllTasks()">Clear All Tasks</ion-button> -->
+  <!-- Add more dropdown items here if needed -->
+</div>
+
+<!-- Task List -->
+<ion-list class="container" *ngIf="showOption">
+  <ion-item *ngFor="let item of items">
+    <ion-checkbox *ngIf="this.id !== null && (item.id !== this.id)" mode="ios" justify="start" labelPlacement="end">
+      {{item.name}} -> {{item.qty}}
+    </ion-checkbox>
+
+    <ion-item>
+      <ion-button fill="clear" (click)="this.editingTask=true; setFormEdit(item.id)">
+        <ion-icon name="create-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear" (click)="deleteTask(item.id)">
+        <ion-icon name="trash-outline" slot="icon-only" color="red"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-item>
+</ion-list>
+
+<!-- Add/Edit Task Card -->
+<ion-card *ngIf="showCard">
+  <div class="container" *ngIf="!showOption || (showOption && editingTask)">
+    <ion-input
+      placeholder="What are you working on?"
+      [(ngModel)]="task">
+    </ion-input>
+    <ion-label class = "pomodoro-label"> Est Pomodoros</ion-label>
+    <div class="controllers">
+      <input
+        type="text"
+        label="Est Pomodoros"
+        label-placement="floating"
+        fill="outline"
+        value="{{qty}}"
+        [(ngModel)]="qty"
+        disabled
+      />
+  
+      <ion-button (click)="incrementPomodoro()">
+        <ion-icon slot="icon-only" name="caret-up"></ion-icon>
+      </ion-button>
+      <ion-button (click)="decrementPodoro()">
+        <ion-icon class="iconDown" slot="icon-only" name="caret-up"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+  <div class="card-footer">
+    <ion-button (click)="addTask()">Save</ion-button>
+    <ion-button (click)="showCard = false">Cancel</ion-button>
+  </div>
+</ion-card>
+
+<!-- Add Task Button -->
+<ion-button *ngIf="!showCard" (click)="showCard = !showCard; editingTask ? updateTask(id) : addTask()" class="add-task-button">
+  <ion-icon aria-hidden="true" name="add-circle-outline"></ion-icon>
+  {{ editingTask ? 'save' : 'Adicionar novo' }}
+</ion-button>

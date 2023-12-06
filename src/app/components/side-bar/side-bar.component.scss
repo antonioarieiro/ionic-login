@@ -1,0 +1,147 @@
+ion-button {
+    color:black;
+    padding: 10px;
+    width: fit-content;
+}
+
+ion-label{
+    padding: 15px;
+    font-size: 15px;
+    display: center;
+}
+
+ion-list #list-buttons{
+        display: flex;
+        margin-left: -50px;
+}
+
+ion-button {
+    color:black;
+    padding: 10px;
+    width: fit-content;
+}
+
+ion-label{
+    padding: 15px;
+    font-size: 15px;
+    display: center;
+}
+
+ion-list #list-buttons{
+        display: flex;
+        margin-left: -50px;
+}
+
+.timer-container {
+    background: #fff; // Assuming a white background
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: fit-content; // Adjust width as needed
+  
+    .timer-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+  
+      ion-icon {
+        margin-right: 10px;
+        font-size: 24px; // Ensure the icon size is adequate
+      }
+  
+      h2 {
+        font-size: 20px; // Adjust size as needed
+        color: #333; // Adjust color as needed
+        font-weight: bold; // Use 'font-weight' for boldness
+        margin: 0;
+      }
+    }
+  
+    .timer-controls {
+      display: flex;
+      flex-direction: column; // Change to column to stack vertically
+      align-items: center; // Center align the items
+      
+  
+      .timer-control {
+        width: auto; // Set width to 100% if you want to stretch the controls to full container width
+        color: darkgray;
+  
+        &:not(:last-child) {
+          margin-bottom: 10px; // Adds space between the controls
+        }
+  
+        label {
+          font-size: 16px; // Adjust size as needed
+          color: black; // Adjust color as needed
+          margin-bottom: 5px;
+        }
+
+        input{
+            display: flex;
+            align-self: center;
+            padding: 8px;
+            margin: 10px;
+            background-color: lightgray;
+            border: none;
+            width: 50%;
+            border-radius: 5px;
+            
+        }
+
+      }
+    }
+  }
+
+  .activity-summary {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em; // Adjust the font size as needed
+  
+    h2 {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+  
+    p {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+  
+    .summary-cards {
+      display: flex;
+      flex-direction: column; // Stack vertically
+      align-items: center; // Center the cards horizontally
+      gap: 10px; // Space between cards
+  
+      .summary-card {
+        background-color: #ffe0e0; // Light pink background
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 80%; // Adjust the width as needed
+        max-width: 300px; // Set a max-width if necessary
+        padding: 20px;
+        margin: auto; // Center the card in the available space
+  
+        ion-icon {
+          font-size: 2rem; // Adjust the icon size as needed
+          color: #fc5c65; // Icon color
+          margin-bottom: 10px;
+        }
+  
+        h3 {
+          font-size: 1.5rem; // Adjust the number size as needed
+          color: #fc5c65; // Number color
+          margin: 0;
+        }
+  
+        p {
+          font-size: 1rem; // Adjust the label font size as needed
+          color: #555; // Label color
+          margin: 0;
+        }
+      }
+    }
+  }

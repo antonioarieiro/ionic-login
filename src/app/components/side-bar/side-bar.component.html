@@ -1,0 +1,86 @@
+<ion-menu contentId="main-content" >
+  <ion-header fill="clear">
+      <ion-button fill="clear">
+          <ion-avatar aria-hidden="true" slot="start">
+            <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Username</ion-label>
+      </ion-button>
+  </ion-header>
+
+  <ion-content>
+    <ion-list id="list-buttons">
+      <ion-button fill="clear" (click)="toggleStatistics()">
+        <ion-icon aria-hidden="true" name="stats-chart" slot="start"></ion-icon>
+        <ion-label>Statistics</ion-label>
+      </ion-button>
+      <ion-button fill="clear" (click)="toggleSettings()">
+        <ion-icon aria-hidden="true" name="cog" slot="start"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon aria-hidden="true" name="log-out-outline" slot="start"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-button>
+    </ion-list>
+
+    <!-- Statistics Section -->
+    <div *ngIf="showStatistics" class="activity-summary">
+      <div class="summary-header">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <h2>Activity Summary</h2>
+      </div>
+      <p>This report is only available when you are logged in</p>
+      <div class="summary-cards">
+        <div class="summary-card">
+          <h3>{{ finishedPomodoros }}</h3>
+          <p>hours focused</p>
+        </div>
+        <!-- Add other summary cards if needed -->
+      </div>
+    </div>
+
+
+      <!-- Timer Settings -->
+    <div *ngIf="showSettings" class="timer-settings">
+      <div class="timer-container">
+        <div class="timer-header">
+          <ion-icon name="time-outline"></ion-icon>          
+          <h2>Time (minutes)</h2>
+        </div>
+        
+        <div class="timer-controls">
+          <div class="timer-control">
+            <label>Pomodoro</label>
+            <input type="number" value="25" />
+          </div>
+          <div class="timer-control">
+            <label>Short Break</label>
+            <input type="number" value="5" />
+          </div>
+          <div class="timer-control">
+            <label>Long Break</label>
+            <input type="number" value="15" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <ion-button fill="clear">
+        <ion-icon aria-hidden="true" name="trash" slot="start"></ion-icon>
+        <ion-label>Delete Account</ion-label>
+    </ion-button>
+</ion-menu>
+
+<div ion-page id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title center>Meadow Minder</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</div>
